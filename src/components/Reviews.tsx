@@ -105,7 +105,7 @@ export default function Reviews({ showAll = false, limit = 6, service }: Reviews
             </span>
           </div>
           <p className="text-lg text-gray-600">
-            Based on {totalReviews}+ verified Google reviews
+            Based on 30+ verified Google reviews
           </p>
         </div>
 
