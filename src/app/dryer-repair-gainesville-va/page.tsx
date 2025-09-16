@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { createPageSEO } from '@/lib/seo'
 import { dryerServiceSchema } from '@/lib/schema'
 import { PhoneIcon, CheckIcon, ExclamationTriangleIcon } from '@heroicons/react/24/solid'
+import Reviews from '@/components/Reviews'
 
 export const metadata: Metadata = createPageSEO(
   'Dryer Repair Gainesville VA - Fast Same Day Service',
@@ -224,8 +225,11 @@ export default function DryerRepairGainesvilleVA() {
           </div>
         </section>
 
+        {/* Reviews Section */}
+        <Reviews service="dryer" limit={3} />
+
         {/* FAQ Section */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">

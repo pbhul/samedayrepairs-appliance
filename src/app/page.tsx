@@ -1,5 +1,6 @@
 import { PhoneIcon, ClockIcon, CheckIcon, StarIcon, MapPinIcon } from '@heroicons/react/24/solid'
 import { faqSchema } from '@/lib/schema'
+import Reviews from '@/components/Reviews'
 
 const services = [
   {
@@ -239,8 +240,11 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Reviews Section */}
+        <Reviews limit={6} />
+
         {/* FAQ Section */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
