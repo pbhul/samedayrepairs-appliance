@@ -80,8 +80,8 @@ export default function Reviews({ showAll = false, limit = 6, service }: Reviews
 
   const displayedReviews = showAll ? filteredReviews : filteredReviews.slice(0, limit)
 
-  const averageRating = reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length
-  const totalReviews = reviews.length
+  const averageRating = 5.0
+  const totalReviews = 35
 
   return (
     <section className="py-16 bg-gray-50">
@@ -105,7 +105,7 @@ export default function Reviews({ showAll = false, limit = 6, service }: Reviews
             </span>
           </div>
           <p className="text-lg text-gray-600">
-            Based on 30+ verified Google reviews
+            Based on 35+ verified Google reviews
           </p>
         </div>
 

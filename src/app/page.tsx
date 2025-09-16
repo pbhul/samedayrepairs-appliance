@@ -104,7 +104,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center text-blue-200">
                   <StarIcon className="h-5 w-5 text-yellow-400 mr-1" />
-                  <span className="mr-4">4.9/5 Stars</span>
+                  <span className="mr-4">5.0/5 Stars</span>
                   <ClockIcon className="h-5 w-5 mr-1" />
                   <span>Same-Day Service Available</span>
                 </div>
@@ -231,9 +231,9 @@ export default function Home() {
               </div>
               <div className="text-center">
                 <StarIcon className="h-12 w-12 text-yellow-500 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">4.9 Star Rating</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">5.0 Star Rating</h3>
                 <p className="text-gray-600">
-                  Over 150 five-star reviews from satisfied customers. Professional, reliable service with upfront pricing and no hidden fees.
+                  Over 35+ five-star reviews from satisfied customers. Professional, reliable service with upfront pricing and no hidden fees.
                 </p>
               </div>
             </div>
@@ -286,7 +286,7 @@ export default function Home() {
               </a>
             </div>
             <div className="mt-8 text-blue-200">
-              <p>⭐ 4.9/5 Stars • 150+ Reviews • Same-Day Service Available • 10+ Years Experience</p>
+              <p>⭐ 5.0/5 Stars • 35+ Reviews • Same-Day Service Available • 10+ Years Experience</p>
             </div>
           </div>
         </section>

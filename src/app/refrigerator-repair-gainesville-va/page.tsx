@@ -239,7 +239,7 @@ export default function RefrigeratorRepairGainesvilleVA() {
               </a>
             </div>
             <div className="mt-8 text-blue-200">
-              <p>⭐ 4.9/5 Stars • 150+ Reviews • Same-Day Service Available • 10+ Years Experience</p>
+              <p>⭐ 5.0/5 Stars • 35+ Reviews • Same-Day Service Available • 10+ Years Experience</p>
             </div>
           </div>
         </section>
