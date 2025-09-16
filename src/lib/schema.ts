@@ -217,7 +217,7 @@ export const dryerServiceSchema: Service = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Dryer Vent Cleaning'
+          name: 'Dryer Maintenance'
         }
       }
     ]

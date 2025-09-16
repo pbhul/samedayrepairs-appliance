@@ -4,15 +4,15 @@ import { faqSchema } from '@/lib/schema'
 const services = [
   {
     name: 'Refrigerator Repair',
-    description: 'Same-day refrigerator repair for all major brands. Not cooling, leaking, or making noise? We fix it fast.',
-    features: ['Same-day service', 'All major brands', 'Emergency repairs'],
+    description: 'Same-day refrigerator repair for all major brands when possible. Not cooling, leaking, or making noise? We can help.',
+    features: ['Same-day service', 'All major brands', 'Expert technicians'],
     href: '/refrigerator-repair-gainesville-va',
     urgent: true
   },
   {
     name: 'Dryer Repair',
-    description: 'Expert dryer repair service. Not heating, not drying, or taking too long? Professional repair available today.',
-    features: ['Same-day service', 'Safety inspections', 'Vent cleaning'],
+    description: 'Expert dryer repair service. Not heating, not drying, or taking too long? Same-day service when available.',
+    features: ['Same-day service', 'Safety inspections', 'All brands'],
     href: '/dryer-repair-gainesville-va',
     urgent: true
   },
@@ -40,19 +40,19 @@ const serviceAreas = [
 const homePageFaqs = [
   {
     question: 'What appliance repair services do you provide in Gainesville VA?',
-    answer: 'We provide comprehensive appliance repair services in Gainesville VA including refrigerator repair, dryer repair, washer repair, dishwasher repair, garbage disposal repair, and ice maker repair. We service all major brands with same-day service available.'
+    answer: 'We provide comprehensive residential appliance repair services in Gainesville VA including refrigerator repair, dryer repair, washer repair, dishwasher repair, garbage disposal repair, and ice maker repair. We service all major brands and models.'
   },
   {
     question: 'Do you offer same-day appliance repair in Gainesville VA?',
-    answer: 'Yes! We offer same-day appliance repair service in Gainesville VA and surrounding areas when you call before 2 PM. Emergency repairs for refrigerators not cooling can often be scheduled within 2-4 hours.'
+    answer: 'Yes! We offer same-day appliance repair service in Gainesville VA and surrounding areas when possible, depending on scheduling and the specific repair needed.'
   },
   {
     question: 'What areas do you serve for appliance repair?',
-    answer: 'We provide appliance repair services throughout Northern Virginia including Gainesville, Haymarket, Bristow, Nokesville, Warrenton, Centreville, Fairfax, and Manassas. Same-day service is available in all these areas.'
+    answer: 'We provide appliance repair services throughout Northern Virginia including Gainesville, Haymarket, Bristow, Nokesville, Warrenton, Centreville, Fairfax, and Manassas.'
   },
   {
-    question: 'How much does appliance repair cost in Gainesville VA?',
-    answer: 'Appliance repair costs vary by type of appliance and issue. Typical ranges: refrigerator repair $89-$299, dryer repair $79-$249, washer repair $89-$279. We provide upfront pricing with no hidden fees.'
+    question: 'Do you provide upfront pricing for appliance repair?',
+    answer: 'Yes, we provide clear upfront pricing with no hidden fees. Contact us for a quote based on your specific appliance issue and we&apos;ll give you honest, transparent pricing.'
   }
 ]
 
@@ -90,7 +90,7 @@ export default function Home() {
                 </h1>
                 <p className="text-xl mb-8 text-blue-100">
                   Same Day Repairs provides expert appliance repair in Gainesville VA with 25+ years of experience.
-                  Refrigerator not cooling? Dryer not heating? We fix it fast with same-day service.
+                  Refrigerator not cooling? Dryer not heating? We provide professional, reliable repair service.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-6">
                   <a
@@ -101,10 +101,10 @@ export default function Home() {
                     Call (703) 555-0123
                   </a>
                   <a
-                    href="#emergency-service"
+                    href="#services"
                     className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-4 px-8 rounded-lg text-lg transition-colors text-center"
                   >
-                    Emergency Service
+                    Get Quote
                   </a>
                 </div>
                 <div className="flex items-center text-blue-200">
@@ -126,18 +126,18 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Emergency Notice */}
-        <section id="emergency-service" className="bg-red-50 border-l-4 border-red-500 py-8">
+        {/* Service Notice */}
+        <section id="services" className="bg-blue-50 border-l-4 border-blue-500 py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center">
-              <ClockIcon className="h-8 w-8 text-red-500 mr-4" />
+              <ClockIcon className="h-8 w-8 text-blue-500 mr-4" />
               <div>
-                <h2 className="text-xl font-semibold text-red-800">
-                  Appliance Emergency? Same-Day Service Available in Gainesville VA!
+                <h2 className="text-xl font-semibold text-blue-800">
+                  Need Appliance Repair? Same-Day Service Available in Gainesville VA!
                 </h2>
-                <p className="text-red-700">
-                  Refrigerator not cooling? Dryer overheating? Don&apos;t wait - these are emergencies!
-                  Call now for same-day repair service. Available 7 days a week.
+                <p className="text-blue-700">
+                  Refrigerator not cooling? Dryer not heating? We provide professional repair service.
+                  Same-day service available when scheduling permits.
                 </p>
               </div>
             </div>
@@ -224,7 +224,7 @@ export default function Home() {
                 <ClockIcon className="h-12 w-12 text-orange-500 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Same-Day Service</h3>
                 <p className="text-gray-600">
-                  Most appliance repairs completed the same day you call. Emergency service available for refrigerators and other critical appliances.
+                  Same-day appliance repair service available when scheduling permits. We strive to complete most repairs quickly and efficiently.
                 </p>
               </div>
               <div className="text-center">

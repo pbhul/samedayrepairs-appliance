@@ -58,30 +58,29 @@ const dryerTypes = [
   'Gas Dryers',
   'Stackable Dryers',
   'Compact Dryers',
-  'Commercial Dryers',
   'Ventless Dryers'
 ]
 
 const dryerFaqs = [
   {
     question: 'How quickly can you repair my dryer in Gainesville VA?',
-    answer: 'We offer same-day dryer repair service in Gainesville VA when you call before 2 PM. Most dryer repairs can be completed in one visit with our fully stocked service trucks.'
+    answer: 'We offer same-day dryer repair service in Gainesville VA when scheduling permits. Most dryer repairs can be completed efficiently with our well-stocked service trucks.'
   },
   {
     question: 'Why is my dryer not heating up?',
     answer: 'The most common causes are a blown thermal fuse, faulty heating element (electric dryers), or gas valve issues (gas dryers). Our technicians can quickly diagnose and fix the problem.'
   },
   {
-    question: 'How much does dryer repair cost in Gainesville VA?',
-    answer: 'Dryer repair costs typically range from $79-$249 depending on the issue. We provide upfront pricing with no hidden fees. Our $79 service call fee is applied toward the repair cost.'
+    question: 'Do you provide upfront pricing for dryer repair?',
+    answer: 'Yes, we provide clear upfront pricing with no hidden fees. Contact us for a quote based on your specific dryer issue and we&apos;ll give you honest, transparent pricing.'
   },
   {
     question: 'Is it worth repairing an old dryer?',
-    answer: 'If your dryer is less than 10 years old and the repair cost is under $300, it\'s usually worth repairing. We\'ll give you an honest assessment and recommendation based on your specific situation.'
+    answer: 'If your dryer is less than 10 years old, it&apos;s usually worth repairing. We&apos;ll give you an honest assessment and recommendation based on your specific situation and the repair needed.'
   },
   {
-    question: 'Do you clean dryer vents?',
-    answer: 'Yes! Clogged dryer vents are a major cause of poor drying performance and fire hazards. We provide professional dryer vent cleaning as part of our comprehensive dryer repair services.'
+    question: 'Do you service residential dryers only?',
+    answer: 'Yes, we specialize in residential dryer repair for all major brands. We work on electric and gas dryers in homes throughout Northern Virginia.'
   }
 ]
 
@@ -104,12 +103,12 @@ export default function DryerRepairGainesvilleVA() {
                 <h1 className="text-4xl lg:text-5xl font-bold mb-6">
                   Dryer Repair Gainesville VA
                   <span className="block text-2xl lg:text-3xl text-orange-200 mt-2">
-                    Fast Same-Day Service
+                    Same-Day Service Available
                   </span>
                 </h1>
                 <p className="text-xl mb-8 text-orange-100">
-                  Expert dryer repair in Gainesville VA and surrounding areas.
-                  Not heating? Not drying? Taking too long? We fix all dryer problems fast.
+                  Expert residential dryer repair in Gainesville VA and surrounding areas.
+                  Not heating? Not drying? Taking too long? We provide professional dryer repair service.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
@@ -139,18 +138,18 @@ export default function DryerRepairGainesvilleVA() {
           </div>
         </section>
 
-        {/* Safety Alert */}
-        <section id="safety-alert" className="bg-red-50 border-l-4 border-red-500 py-8">
+        {/* Safety Notice */}
+        <section id="safety-notice" className="bg-orange-50 border-l-4 border-orange-500 py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center">
-              <ExclamationTriangleIcon className="h-8 w-8 text-red-500 mr-4" />
+              <ExclamationTriangleIcon className="h-8 w-8 text-orange-500 mr-4" />
               <div>
-                <h2 className="text-xl font-semibold text-red-800">
-                  Dryer Overheating or Not Drying? Safety Risk Alert!
+                <h2 className="text-xl font-semibold text-orange-800">
+                  Dryer Overheating or Not Drying? Professional Repair Available!
                 </h2>
-                <p className="text-red-700">
-                  Overheating dryers and clogged vents are leading causes of house fires.
-                  If your dryer is too hot or taking longer than usual, call us immediately for same-day service.
+                <p className="text-orange-700">
+                  Overheating dryers can be safety concerns and indicate mechanical issues.
+                  If your dryer is too hot or taking longer than usual, call us for professional diagnosis and repair.
                 </p>
               </div>
             </div>

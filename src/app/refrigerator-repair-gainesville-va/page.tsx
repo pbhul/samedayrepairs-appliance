@@ -46,23 +46,23 @@ const serviceAreas = [
 const faqs = [
   {
     question: 'How quickly can you repair my refrigerator in Gainesville VA?',
-    answer: 'We offer same-day refrigerator repair service in Gainesville VA when you call before 2 PM. Emergency repairs for refrigerators not cooling can often be scheduled within 2-4 hours.'
+    answer: 'We offer same-day refrigerator repair service in Gainesville VA when scheduling permits. Many refrigerator repairs can be completed promptly depending on the issue and parts availability.'
   },
   {
     question: 'What refrigerator brands do you repair?',
-    answer: 'We repair all major refrigerator brands including GE, Whirlpool, Samsung, LG, Maytag, Kenmore, Frigidaire, Bosch, KitchenAid, Sub-Zero, Viking, and Thermador. Our technicians are factory-trained on most brands.'
+    answer: 'We repair all major residential refrigerator brands including GE, Whirlpool, Samsung, LG, Maytag, Kenmore, Frigidaire, Bosch, and KitchenAid. Our technicians are trained on most major brands.'
   },
   {
-    question: 'How much does refrigerator repair cost in Gainesville VA?',
-    answer: 'Refrigerator repair costs typically range from $89-$299 depending on the problem. We provide upfront pricing with no hidden fees. Our $89 service call fee is applied toward the repair cost.'
+    question: 'Do you provide upfront pricing for refrigerator repair?',
+    answer: 'Yes, we provide clear upfront pricing with no hidden fees. Contact us for a quote based on your specific refrigerator issue and we&apos;ll give you honest, transparent pricing.'
   },
   {
     question: 'Do you repair refrigerators that are not cooling?',
-    answer: 'Yes! Refrigerators not cooling is our most common emergency repair. This could be due to compressor failure, thermostat issues, or refrigerant leaks. We prioritize these calls due to food spoilage risk.'
+    answer: 'Yes! Refrigerators not cooling is our most common repair. This could be due to compressor failure, thermostat issues, or refrigerant leaks. We understand the urgency due to food spoilage concerns.'
   },
   {
     question: 'What areas around Gainesville VA do you serve?',
-    answer: 'We provide refrigerator repair service throughout Northern Virginia including Gainesville, Haymarket, Bristow, Nokesville, Warrenton, Centreville, Fairfax, and Manassas.'
+    answer: 'We provide residential refrigerator repair service throughout Northern Virginia including Gainesville, Haymarket, Bristow, Nokesville, Warrenton, Centreville, Fairfax, and Manassas.'
   }
 ]
 
@@ -95,8 +95,8 @@ export default function RefrigeratorRepairGainesvilleVA() {
                   </span>
                 </h1>
                 <p className="text-xl mb-8 text-blue-100">
-                  Expert refrigerator repair in Gainesville VA and surrounding areas.
-                  Not cooling? Leaking? Strange noises? We fix it fast with 25+ years of experience.
+                  Expert residential refrigerator repair in Gainesville VA and surrounding areas.
+                  Not cooling? Leaking? Strange noises? We provide professional repair with 25+ years of experience.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
@@ -126,18 +126,18 @@ export default function RefrigeratorRepairGainesvilleVA() {
           </div>
         </section>
 
-        {/* Emergency Notice */}
-        <section id="emergency-service" className="bg-red-50 border-l-4 border-red-500 py-8">
+        {/* Priority Service Notice */}
+        <section id="priority-service" className="bg-blue-50 border-l-4 border-blue-500 py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center">
-              <ClockIcon className="h-8 w-8 text-red-500 mr-4" />
+              <ClockIcon className="h-8 w-8 text-blue-500 mr-4" />
               <div>
-                <h2 className="text-xl font-semibold text-red-800">
-                  Refrigerator Not Cooling? Emergency Same-Day Service Available!
+                <h2 className="text-xl font-semibold text-blue-800">
+                  Refrigerator Not Cooling? Same-Day Service Available!
                 </h2>
-                <p className="text-red-700">
-                  Don&apos;t let your food spoil. Call us now for emergency refrigerator repair in Gainesville VA.
-                  Available 7 days a week with same-day service when you call before 2 PM.
+                <p className="text-blue-700">
+                  Don&apos;t let your food spoil. Call us for prompt refrigerator repair in Gainesville VA.
+                  Same-day service available when scheduling permits.
                 </p>
               </div>
             </div>
