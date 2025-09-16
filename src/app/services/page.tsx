@@ -1,34 +1,63 @@
-import { PhoneIcon, ClockIcon, CheckIcon, StarIcon, MapPinIcon } from '@heroicons/react/24/solid'
+import { Metadata } from 'next'
+import { createPageSEO } from '@/lib/seo'
 import { faqSchema } from '@/lib/schema'
+import { PhoneIcon, CheckIcon, StarIcon, ClockIcon } from '@heroicons/react/24/solid'
 import Reviews from '@/components/Reviews'
+import Link from 'next/link'
+
+export const metadata: Metadata = createPageSEO(
+  'Appliance Repair Services Gainesville VA - Same Day Repairs',
+  'Complete appliance repair services in Gainesville VA. Refrigerator, dryer, washer, dishwasher repair and more. Same-day service available. Call (703) 555-0123!',
+  '/services'
+)
 
 const services = [
   {
     name: 'Refrigerator Repair',
-    description: 'Same-day refrigerator repair for all major brands when possible. Not cooling, leaking, or making noise? We can help.',
-    features: ['Same-day service', 'All major brands', 'Expert technicians'],
+    description: 'Expert refrigerator repair for all major brands. Not cooling, leaking, or making strange noises? Same-day service available.',
+    features: ['Same-day service available', 'All major brands', 'Emergency repairs'],
     href: '/refrigerator-repair-gainesville-va',
+    icon: '❄️',
     urgent: true
   },
   {
     name: 'Dryer Repair',
-    description: 'Expert dryer repair service. Not heating, not drying, or taking too long? Same-day service when available.',
-    features: ['Same-day service', 'Safety inspections', 'All brands'],
+    description: 'Professional dryer repair service. Not heating, not drying, or taking too long? We provide fast, reliable repair.',
+    features: ['Same-day service available', 'Safety inspections', 'All dryer types'],
     href: '/dryer-repair-gainesville-va',
+    icon: '🌀',
     urgent: true
   },
   {
     name: 'Washer Repair',
-    description: 'Professional washing machine repair. Not spinning, leaking, or won\'t drain? Quick diagnosis and repair.',
-    features: ['Quick diagnosis', 'All brands', 'Warranty included'],
+    description: 'Washing machine repair for all brands. Not spinning, leaking, or won\'t drain? Quick diagnosis and professional repair.',
+    features: ['Quick diagnosis', 'All brands serviced', 'Warranty included'],
     href: '/washer-repair-gainesville-va',
+    icon: '🧺',
     urgent: false
   },
   {
     name: 'Dishwasher Repair',
-    description: 'Dishwasher repair service for all brands. Not cleaning, not draining, or strange noises? We can help.',
+    description: 'Dishwasher repair service for all brands. Not cleaning, not draining, or strange noises? Professional repair service.',
     features: ['Professional service', 'Parts in stock', 'Upfront pricing'],
     href: '/dishwasher-repair-gainesville-va',
+    icon: '🍽️',
+    urgent: false
+  },
+  {
+    name: 'Ice Maker Repair',
+    description: 'Ice maker repair and maintenance. Not making ice, leaking, or making bad ice? We can restore your ice maker.',
+    features: ['Specialized service', 'All brands', 'Quick turnaround'],
+    href: '/ice-maker-repair-gainesville-va',
+    icon: '🧊',
+    urgent: false
+  },
+  {
+    name: 'Garbage Disposal Repair',
+    description: 'Garbage disposal repair and installation. Jammed, leaking, or not working? Professional disposal service.',
+    features: ['Same-day service', 'Installation available', 'All brands'],
+    href: '/garbage-disposal-repair-gainesville-va',
+    icon: '🗑️',
     urgent: false
   }
 ]
@@ -38,26 +67,30 @@ const serviceAreas = [
   'Warrenton VA', 'Centreville VA', 'Fairfax VA', 'Manassas VA'
 ]
 
-const homePageFaqs = [
+const servicesFaqs = [
   {
-    question: 'What appliance repair services do you provide in Gainesville VA?',
-    answer: 'We provide comprehensive residential appliance repair services in Gainesville VA including refrigerator repair, dryer repair, washer repair, dishwasher repair, garbage disposal repair, and ice maker repair. We service all major brands and models.'
+    question: 'What appliance repair services do you provide?',
+    answer: 'We provide comprehensive residential appliance repair services including refrigerator repair, dryer repair, washer repair, dishwasher repair, ice maker repair, and garbage disposal repair. We service all major brands and models.'
   },
   {
-    question: 'Do you offer same-day appliance repair in Gainesville VA?',
-    answer: 'Yes! We offer same-day appliance repair service in Gainesville VA and surrounding areas when possible, depending on scheduling and the specific repair needed.'
+    question: 'Do you offer same-day appliance repair service?',
+    answer: 'Yes, we offer same-day appliance repair service when scheduling permits, especially for urgent issues like refrigerators not cooling or dryers not heating. Contact us early in the day for best availability.'
+  },
+  {
+    question: 'What brands of appliances do you repair?',
+    answer: 'We repair all major appliance brands including GE, Whirlpool, Samsung, LG, Maytag, Kenmore, Frigidaire, Bosch, KitchenAid, Electrolux, Amana, and many others. Our technicians are trained on most residential appliance brands.'
+  },
+  {
+    question: 'Do you provide upfront pricing for appliance repairs?',
+    answer: 'Yes, we provide clear upfront pricing with no hidden fees. Our technician will diagnose the issue and provide you with a transparent quote before proceeding with any repair work.'
   },
   {
     question: 'What areas do you serve for appliance repair?',
     answer: 'We provide appliance repair services throughout Northern Virginia including Gainesville, Haymarket, Bristow, Nokesville, Warrenton, Centreville, Fairfax, and Manassas.'
-  },
-  {
-    question: 'Do you provide upfront pricing for appliance repair?',
-    answer: 'Yes, we provide clear upfront pricing with no hidden fees. Contact us for a quote based on your specific appliance issue and we&apos;ll give you honest, transparent pricing.'
   }
 ]
 
-export default function Home() {
+export default function ServicesPage() {
   return (
     <>
       <script
@@ -65,7 +98,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             ...faqSchema,
-            mainEntity: homePageFaqs.map(faq => ({
+            mainEntity: servicesFaqs.map(faq => ({
               '@type': 'Question',
               name: faq.question,
               acceptedAnswer: {
@@ -83,14 +116,14 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-                #1 Appliance Repair Gainesville VA
+                Professional Appliance Repair Services
                 <span className="block text-2xl lg:text-3xl text-blue-200 mt-2">
-                  Same-Day Service Available
+                  Gainesville VA & Northern Virginia
                 </span>
               </h1>
               <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
-                Same Day Repairs provides expert appliance repair in Gainesville VA with 10+ years of experience.
-                Refrigerator not cooling? Dryer not heating? We provide professional, reliable repair service.
+                Same Day Repairs provides expert appliance repair services throughout Northern Virginia.
+                From refrigerator repair to dryer repair, we handle all your appliance needs with 10+ years of experience.
               </p>
               <div className="flex justify-center mb-6">
                 <a
@@ -112,41 +145,43 @@ export default function Home() {
         </section>
 
         {/* Service Notice */}
-        <section id="services" className="bg-blue-50 border-l-4 border-blue-500 py-8">
+        <section className="bg-blue-50 border-l-4 border-blue-500 py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-center">
               <ClockIcon className="h-8 w-8 text-blue-500 mr-4" />
               <div className="text-center">
                 <h2 className="text-xl font-semibold text-blue-800">
-                  Need Appliance Repair? Same-Day Service Available in Gainesville VA!
+                  Need Appliance Repair? Same-Day Service Available!
                 </h2>
                 <p className="text-blue-700">
-                  Refrigerator not cooling? Dryer not heating? We provide professional repair service.
-                  Same-day service available when scheduling permits.
+                  Professional appliance repair service throughout Northern Virginia. Same-day service available when scheduling permits.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Services Grid */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Professional Appliance Repair Services in Gainesville VA
+                Complete Appliance Repair Services in Gainesville VA
               </h2>
               <p className="text-lg text-gray-600">
                 Expert repair for all major appliances with same-day service available
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <div key={index} className={`bg-white rounded-lg shadow-lg p-6 ${service.urgent ? 'border-l-4 border-orange-500' : ''}`}>
+                <div key={index} className={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow ${service.urgent ? 'border-l-4 border-orange-500' : 'border-l-4 border-blue-500'}`}>
                   <div className="flex items-start justify-between mb-4">
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      {service.name}
-                    </h3>
+                    <div className="flex items-center">
+                      <span className="text-3xl mr-3">{service.icon}</span>
+                      <h3 className="text-xl font-semibold text-gray-900">
+                        {service.name}
+                      </h3>
+                    </div>
                     {service.urgent && (
                       <span className="bg-orange-100 text-orange-800 text-xs font-medium px-2 py-1 rounded-full">
                         Same-Day
@@ -162,34 +197,12 @@ export default function Home() {
                       </li>
                     ))}
                   </ul>
-                  <a
+                  <Link
                     href={service.href}
-                    className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition-colors"
+                    className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition-colors w-full text-center"
                   >
                     Learn More
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Service Areas */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Appliance Repair Service Areas in Northern Virginia
-              </h2>
-              <p className="text-lg text-gray-600">
-                Professional same-day appliance repair throughout the region
-              </p>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {serviceAreas.map((area, index) => (
-                <div key={index} className="text-center p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
-                  <MapPinIcon className="h-6 w-6 text-blue-500 mx-auto mb-2" />
-                  <span className="font-medium text-gray-900">{area}</span>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -197,26 +210,26 @@ export default function Home() {
         </section>
 
         {/* Why Choose Us */}
-        <section className="py-16">
+        <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Why Choose Same Day Repairs for Appliance Repair in Gainesville VA?
+                Why Choose Same Day Repairs for Your Appliance Needs?
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <ClockIcon className="h-12 w-12 text-orange-500 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Same-Day Service</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Same-Day Service Available</h3>
                 <p className="text-gray-600">
-                  Same-day appliance repair service available when scheduling permits. We strive to complete most repairs quickly and efficiently.
+                  Same-day appliance repair service available when scheduling permits. We understand appliance emergencies can&apos;t wait.
                 </p>
               </div>
               <div className="text-center">
                 <CheckIcon className="h-12 w-12 text-green-500 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">10+ Years Experience</h3>
                 <p className="text-gray-600">
-                  Expert technicians with over 10 years of experience repairing all major appliance brands. Trained and certified.
+                  Expert technicians with over 10 years of experience repairing all major appliance brands. Trained and certified professionals.
                 </p>
               </div>
               <div className="text-center">
@@ -230,6 +243,28 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Service Areas */}
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Appliance Repair Service Areas in Northern Virginia
+              </h2>
+              <p className="text-lg text-gray-600">
+                Professional appliance repair service throughout the region
+              </p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {serviceAreas.map((area, index) => (
+                <div key={index} className="text-center p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
+                  <CheckIcon className="h-6 w-6 text-green-500 mx-auto mb-2" />
+                  <span className="font-medium text-gray-900">{area}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Reviews Section */}
         <Reviews limit={6} />
 
@@ -238,11 +273,11 @@ export default function Home() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Frequently Asked Questions About Appliance Repair in Gainesville VA
+                Frequently Asked Questions About Appliance Repair Services
               </h2>
             </div>
             <div className="space-y-6">
-              {homePageFaqs.map((faq, index) => (
+              {servicesFaqs.map((faq, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-md p-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">
                     {faq.question}
@@ -260,7 +295,7 @@ export default function Home() {
         <section className="bg-blue-900 text-white py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-6">
-              Need Appliance Repair in Gainesville VA Today?
+              Need Professional Appliance Repair Service Today?
             </h2>
             <p className="text-xl mb-8">
               Don&apos;t let broken appliances disrupt your life. Same Day Repairs provides fast,

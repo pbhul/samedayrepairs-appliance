@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { createPageSEO } from '@/lib/seo'
 import { refrigeratorServiceSchema, faqSchema } from '@/lib/schema'
-import { PhoneIcon, ClockIcon, CheckIcon } from '@heroicons/react/24/solid'
+import { PhoneIcon, ClockIcon, CheckIcon, StarIcon } from '@heroicons/react/24/solid'
 import Reviews from '@/components/Reviews'
 
 export const metadata: Metadata = createPageSEO(
@@ -87,35 +87,31 @@ export default function RefrigeratorRepairGainesvilleVA() {
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-                  Refrigerator Repair Gainesville VA
-                  <span className="block text-2xl lg:text-3xl text-blue-200 mt-2">
-                    Same-Day Service Available
-                  </span>
-                </h1>
-                <p className="text-xl mb-8 text-blue-100">
-                  Expert residential refrigerator repair in Gainesville VA and surrounding areas.
-                  Not cooling? Leaking? Strange noises? We provide professional repair with 10+ years of experience.
-                </p>
-                <div className="flex justify-center">
-                  <a
-                    href="tel:7035550123"
-                    className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors flex items-center justify-center"
-                  >
-                    <PhoneIcon className="h-6 w-6 mr-2" />
-                    Call (703) 555-0123
-                  </a>
-                </div>
+            <div className="text-center">
+              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+                Refrigerator Repair Gainesville VA
+                <span className="block text-2xl lg:text-3xl text-blue-200 mt-2">
+                  Same-Day Service Available
+                </span>
+              </h1>
+              <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
+                Expert residential refrigerator repair in Gainesville VA and surrounding areas.
+                Not cooling? Leaking? Strange noises? We provide professional repair with 10+ years of experience.
+              </p>
+              <div className="flex justify-center mb-6">
+                <a
+                  href="tel:7035550123"
+                  className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors flex items-center justify-center"
+                >
+                  <PhoneIcon className="h-6 w-6 mr-2" />
+                  Call (703) 555-0123
+                </a>
               </div>
-              <div className="relative">
-                <img
-                  src="/images/refrigerator-repair-gainesville-va-hero.jpg"
-                  alt="Professional refrigerator repair service in Gainesville VA"
-                  className="rounded-lg shadow-2xl"
-                  loading="eager"
-                />
+              <div className="flex items-center justify-center text-blue-200">
+                <StarIcon className="h-5 w-5 text-yellow-400 mr-1" />
+                <span className="mr-4">5.0/5 Stars</span>
+                <ClockIcon className="h-5 w-5 mr-1" />
+                <span>Same-Day Service Available</span>
               </div>
             </div>
           </div>
@@ -124,9 +120,9 @@ export default function RefrigeratorRepairGainesvilleVA() {
         {/* Priority Service Notice */}
         <section id="priority-service" className="bg-blue-50 border-l-4 border-blue-500 py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center">
+            <div className="flex items-center justify-center">
               <ClockIcon className="h-8 w-8 text-blue-500 mr-4" />
-              <div>
+              <div className="text-center">
                 <h2 className="text-xl font-semibold text-blue-800">
                   Refrigerator Not Cooling? Same-Day Service Available!
                 </h2>
