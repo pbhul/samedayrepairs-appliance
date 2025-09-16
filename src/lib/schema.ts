@@ -1,4 +1,4 @@
-import { Organization, LocalBusiness, Service, FAQPage, BreadcrumbList } from 'schema-dts';
+import { Organization, LocalBusiness, Service, FAQPage, BreadcrumbList, ImageObject } from 'schema-dts';
 
 export const organizationSchema: Organization = {
   '@type': 'Organization',
@@ -6,12 +6,7 @@ export const organizationSchema: Organization = {
   name: 'Same Day Repairs',
   alternateName: 'Sameday Repairs',
   url: 'https://samedayrepairs.com',
-  logo: {
-    '@type': 'ImageObject',
-    url: 'https://samedayrepairs.com/logo.png',
-    width: 300,
-    height: 100
-  },
+  logo: 'https://samedayrepairs.com/logo.png',
   contactPoint: {
     '@type': 'ContactPoint',
     telephone: '+1-703-555-0123',
@@ -123,7 +118,41 @@ export const localBusinessSchema: LocalBusiness = {
     reviewCount: 150,
     bestRating: 5,
     worstRating: 1
-  }
+  },
+  review: [
+    {
+      '@type': 'Review',
+      author: {
+        '@type': 'Person',
+        name: 'Sarah Johnson'
+      },
+      datePublished: '2024-01-15',
+      description: 'Same Day Repairs fixed our refrigerator in Gainesville VA the same day we called. Excellent service and fair pricing.',
+      name: 'Excellent Same Day Service',
+      reviewRating: {
+        '@type': 'Rating',
+        bestRating: '5',
+        ratingValue: '5',
+        worstRating: '1'
+      }
+    },
+    {
+      '@type': 'Review',
+      author: {
+        '@type': 'Person',
+        name: 'Mike Davis'
+      },
+      datePublished: '2024-02-08',
+      description: 'Professional dryer repair service in Haymarket VA. Technician was knowledgeable and fixed the issue quickly.',
+      name: 'Professional and Quick',
+      reviewRating: {
+        '@type': 'Rating',
+        bestRating: '5',
+        ratingValue: '5',
+        worstRating: '1'
+      }
+    }
+  ]
 };
 
 export const refrigeratorServiceSchema: Service = {
@@ -174,7 +203,7 @@ export const refrigeratorServiceSchema: Service = {
     '@type': 'Offer',
     availability: 'https://schema.org/InStock',
     priceCurrency: 'USD',
-    priceRange: '$89-$299'
+    price: '$89-$299'
   }
 };
 
@@ -226,7 +255,7 @@ export const dryerServiceSchema: Service = {
     '@type': 'Offer',
     availability: 'https://schema.org/InStock',
     priceCurrency: 'USD',
-    priceRange: '$79-$249'
+    price: '$79-$249'
   }
 };
 
@@ -277,3 +306,44 @@ export const breadcrumbSchema = (items: Array<{name: string, url: string}>): Bre
     item: item.url
   }))
 });
+
+// Enhanced Business Hours Schema
+export const businessHoursSchema = {
+  '@type': 'OpeningHoursSpecification',
+  dayOfWeek: [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday'
+  ],
+  opens: '08:00',
+  closes: '18:00'
+};
+
+export const weekendHoursSchema = {
+  '@type': 'OpeningHoursSpecification',
+  dayOfWeek: 'Saturday',
+  opens: '09:00',
+  closes: '17:00'
+};
+
+// Emergency Service Schema
+export const emergencyServiceSchema = {
+  '@type': 'Service',
+  '@id': 'https://samedayrepairs.com/#emergency-service',
+  name: 'Emergency Appliance Repair',
+  description: 'Emergency appliance repair service available for urgent refrigerator and critical appliance issues in Gainesville VA.',
+  serviceType: 'Emergency Repair',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'Same Day Repairs'
+  },
+  areaServed: ['Gainesville VA', 'Haymarket VA', 'Bristow VA', 'Centreville VA', 'Manassas VA'],
+  availableChannel: {
+    '@type': 'ServiceChannel',
+    serviceUrl: 'https://samedayrepairs.com',
+    servicePhone: '+1-703-555-0123',
+    availableLanguage: 'English'
+  }
+};

@@ -1,6 +1,8 @@
 import { PhoneIcon, ClockIcon, CheckIcon, StarIcon, MapPinIcon } from '@heroicons/react/24/solid'
 import { faqSchema } from '@/lib/schema'
 import Reviews from '@/components/Reviews'
+import Navigation from '@/components/Navigation'
+import Footer from '@/components/Footer'
 
 const services = [
   {
@@ -77,6 +79,7 @@ export default function Home() {
         }}
       />
 
+      <Navigation />
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
@@ -281,6 +284,7 @@ export default function Home() {
           </div>
         </section>
       </div>
+      <Footer />
     </>
   )
 }

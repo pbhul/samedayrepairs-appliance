@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
+/* Critical Path CSS - Above the fold content */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-blue: #1e40af;
+  --primary-orange: #f97316;
+  --text-gray: #374151;
+  --light-gray: #f3f4f6;
 }
 
 @theme inline {
@@ -12,6 +17,64 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Performance optimizations */
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Critical hero section styles */
+.hero-gradient {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+}
+
+/* Optimize button hover states */
+.btn-primary {
+  background: var(--primary-orange);
+  transition: all 0.2s ease-in-out;
+  will-change: transform;
+}
+
+.btn-primary:hover {
+  background: #ea580c;
+  transform: translateY(-1px);
+}
+
+/* Loading performance improvements */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Reduce layout shift */
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, transparent 37%, #f0f0f0 63%);
+  background-size: 400% 100%;
+  animation: skeleton 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Focus accessibility */
+:focus-visible {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -19,8 +82,16 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Print styles */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
 }

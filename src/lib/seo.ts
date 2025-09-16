@@ -1,9 +1,12 @@
-import { NextSeoProps } from 'next-seo';
+import { Metadata } from 'next';
 
-export const defaultSEO: NextSeoProps = {
+export const defaultSEO: Metadata = {
   title: 'Same Day Repairs - #1 Appliance Repair Gainesville VA | Refrigerator & Dryer Experts',
   description: 'Same-day appliance repair in Gainesville VA. Expert refrigerator & dryer repair services. 25+ years experience. Call now for fast, reliable repairs!',
-  canonical: 'https://samedayrepairs.com',
+  metadataBase: new URL('https://samedayrepairs.com'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -21,52 +24,41 @@ export const defaultSEO: NextSeoProps = {
     ],
   },
   twitter: {
-    handle: '@samedayrepairs',
-    site: '@samedayrepairs',
-    cardType: 'summary_large_image',
+    card: 'summary_large_image',
+    title: 'Same Day Repairs - #1 Appliance Repair Gainesville VA',
+    description: 'Same-day appliance repair in Gainesville VA. Expert refrigerator & dryer repair services.',
+    creator: '@samedayrepairs',
+    images: ['/images/sameday-repairs-twitter.jpg'],
   },
-  additionalMetaTags: [
-    {
-      name: 'viewport',
-      content: 'width=device-width, initial-scale=1',
+  keywords: ['appliance repair Gainesville VA', 'refrigerator repair', 'dryer repair', 'same day service', 'Haymarket', 'Bristow', 'Centreville', 'Manassas'],
+  authors: [{ name: 'Same Day Repairs' }],
+  creator: 'Same Day Repairs',
+  publisher: 'Same Day Repairs',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
-    {
-      name: 'robots',
-      content: 'index, follow',
-    },
-    {
-      name: 'author',
-      content: 'Same Day Repairs',
-    },
-    {
-      name: 'geo.region',
-      content: 'US-VA',
-    },
-    {
-      name: 'geo.placename',
-      content: 'Gainesville, Virginia',
-    },
-    {
-      name: 'geo.position',
-      content: '38.7959;-77.6131',
-    },
-    {
-      name: 'ICBM',
-      content: '38.7959, -77.6131',
-    },
-  ],
+  },
 };
 
 export const createPageSEO = (
   title: string,
   description: string,
   path: string,
-  additionalTags?: Partial<NextSeoProps>
-): NextSeoProps => ({
+  additionalTags?: Partial<Metadata>
+): Metadata => ({
   ...defaultSEO,
   title: `${title} | Same Day Repairs`,
   description,
-  canonical: `https://samedayrepairs.com${path}`,
+  alternates: {
+    canonical: path,
+  },
   openGraph: {
     ...defaultSEO.openGraph,
     title,

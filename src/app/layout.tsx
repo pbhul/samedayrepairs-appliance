@@ -98,11 +98,24 @@ export default function RootLayout({
         <meta name="ICBM" content="38.7959, -77.6131" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <meta name="theme-color" content="#1e40af" />
+        <meta name="color-scheme" content="light" />
+        <link rel="manifest" href="/manifest.json" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 transition-all duration-200"
+        >
+          Skip to main content
+        </a>
+        <main id="main-content">
+          {children}
+        </main>
       </body>
     </html>
   );
