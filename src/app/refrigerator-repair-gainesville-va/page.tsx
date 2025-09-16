@@ -96,21 +96,15 @@ export default function RefrigeratorRepairGainesvilleVA() {
                 </h1>
                 <p className="text-xl mb-8 text-blue-100">
                   Expert residential refrigerator repair in Gainesville VA and surrounding areas.
-                  Not cooling? Leaking? Strange noises? We provide professional repair with 25+ years of experience.
+                  Not cooling? Leaking? Strange noises? We provide professional repair with 10+ years of experience.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex justify-center">
                   <a
                     href="tel:7035550123"
                     className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors flex items-center justify-center"
                   >
                     <PhoneIcon className="h-6 w-6 mr-2" />
                     Call (703) 555-0123
-                  </a>
-                  <a
-                    href="#emergency-service"
-                    className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-4 px-8 rounded-lg text-lg transition-colors text-center"
-                  >
-                    Emergency Service
                   </a>
                 </div>
               </div>
@@ -231,7 +225,7 @@ export default function RefrigeratorRepairGainesvilleVA() {
               Don&apos;t wait for your refrigerator problems to get worse.
               Call now for same-day service and get your refrigerator running like new.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <a
                 href="tel:7035550123"
                 className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors flex items-center justify-center"
@@ -239,15 +233,9 @@ export default function RefrigeratorRepairGainesvilleVA() {
                 <PhoneIcon className="h-6 w-6 mr-2" />
                 Call (703) 555-0123 Now
               </a>
-              <a
-                href="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-4 px-8 rounded-lg text-lg transition-colors text-center"
-              >
-                Schedule Online
-              </a>
             </div>
             <div className="mt-8 text-blue-200">
-              <p>⭐ 4.9/5 Stars • 150+ Reviews • Same-Day Service Available</p>
+              <p>⭐ 4.9/5 Stars • 150+ Reviews • Same-Day Service Available • 10+ Years Experience</p>
             </div>
           </div>
         </section>

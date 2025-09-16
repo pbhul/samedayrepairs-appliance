@@ -89,22 +89,16 @@ export default function Home() {
                   </span>
                 </h1>
                 <p className="text-xl mb-8 text-blue-100">
-                  Same Day Repairs provides expert appliance repair in Gainesville VA with 25+ years of experience.
+                  Same Day Repairs provides expert appliance repair in Gainesville VA with 10+ years of experience.
                   Refrigerator not cooling? Dryer not heating? We provide professional, reliable repair service.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 mb-6">
+                <div className="flex justify-center mb-6">
                   <a
                     href="tel:7035550123"
                     className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors flex items-center justify-center"
                   >
                     <PhoneIcon className="h-6 w-6 mr-2" />
                     Call (703) 555-0123
-                  </a>
-                  <a
-                    href="#services"
-                    className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-4 px-8 rounded-lg text-lg transition-colors text-center"
-                  >
-                    Get Quote
                   </a>
                 </div>
                 <div className="flex items-center text-blue-200">
@@ -229,9 +223,9 @@ export default function Home() {
               </div>
               <div className="text-center">
                 <CheckIcon className="h-12 w-12 text-green-500 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">25+ Years Experience</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">10+ Years Experience</h3>
                 <p className="text-gray-600">
-                  Expert technicians with over 25 years of experience repairing all major appliance brands. Factory-trained and certified.
+                  Expert technicians with over 10 years of experience repairing all major appliance brands. Trained and certified.
                 </p>
               </div>
               <div className="text-center">
@@ -278,7 +272,7 @@ export default function Home() {
               Don&apos;t let broken appliances disrupt your life. Same Day Repairs provides fast,
               professional appliance repair service throughout Northern Virginia.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <a
                 href="tel:7035550123"
                 className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors flex items-center justify-center"
@@ -286,15 +280,9 @@ export default function Home() {
                 <PhoneIcon className="h-6 w-6 mr-2" />
                 Call (703) 555-0123 Now
               </a>
-              <a
-                href="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-4 px-8 rounded-lg text-lg transition-colors text-center"
-              >
-                Schedule Online
-              </a>
             </div>
             <div className="mt-8 text-blue-200">
-              <p>⭐ 4.9/5 Stars • 150+ Reviews • Same-Day Service Available • 25+ Years Experience</p>
+              <p>⭐ 4.9/5 Stars • 150+ Reviews • Same-Day Service Available • 10+ Years Experience</p>
             </div>
           </div>
         </section>

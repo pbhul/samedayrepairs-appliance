@@ -110,19 +110,13 @@ export default function DryerRepairGainesvilleVA() {
                   Expert residential dryer repair in Gainesville VA and surrounding areas.
                   Not heating? Not drying? Taking too long? We provide professional dryer repair service.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex justify-center">
                   <a
                     href="tel:7035550123"
                     className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors flex items-center justify-center"
                   >
                     <PhoneIcon className="h-6 w-6 mr-2" />
                     Call (703) 555-0123
-                  </a>
-                  <a
-                    href="#safety-alert"
-                    className="border-2 border-white text-white hover:bg-white hover:text-orange-900 font-semibold py-4 px-8 rounded-lg text-lg transition-colors text-center"
-                  >
-                    Safety Alert
                   </a>
                 </div>
               </div>
@@ -298,7 +292,7 @@ export default function DryerRepairGainesvilleVA() {
               Don&apos;t let dryer problems disrupt your routine or create safety hazards.
               Call now for same-day service and get your dryer working perfectly again.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <a
                 href="tel:7035550123"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors flex items-center justify-center"
@@ -306,15 +300,9 @@ export default function DryerRepairGainesvilleVA() {
                 <PhoneIcon className="h-6 w-6 mr-2" />
                 Call (703) 555-0123 Now
               </a>
-              <a
-                href="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-orange-900 font-semibold py-4 px-8 rounded-lg text-lg transition-colors text-center"
-              >
-                Schedule Online
-              </a>
             </div>
             <div className="mt-8 text-orange-200">
-              <p>⭐ 4.9/5 Stars • 150+ Reviews • Same-Day Service Available</p>
+              <p>⭐ 4.9/5 Stars • 150+ Reviews • Same-Day Service Available • 10+ Years Experience</p>
             </div>
           </div>
         </section>
