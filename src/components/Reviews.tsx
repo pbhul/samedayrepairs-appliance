@@ -156,7 +156,7 @@ export default function Reviews({ showAll = false, limit = 6, service }: Reviews
             <p className="text-gray-600 mb-6">
               See what more customers are saying about our appliance repair services
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <a
                 href="https://www.google.com/maps/place/Sameday+Repairs+Inc/@38.7467151,-77.8763042,11z/data=!3m1!4b1!4m6!3m5!1s0x89b7b685aaaaaaab:0x1175b26e403f2e0c!8m2!3d38.746818!4d-77.5813105!16s%2Fg%2F1vy7hgjt?entry=ttu&g_ep=EgoyMDI1MDkxMC4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
@@ -164,14 +164,6 @@ export default function Reviews({ showAll = false, limit = 6, service }: Reviews
                 className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
               >
                 View Google Reviews
-              </a>
-              <a
-                href="https://www.google.com/maps/place/Sameday+Repairs+Inc/@38.7467151,-77.8763042,11z/data=!3m1!4b1!4m6!3m5!1s0x89b7b685aaaaaaab:0x1175b26e403f2e0c!8m2!3d38.746818!4d-77.5813105!16s%2Fg%2F1vy7hgjt?entry=ttu&g_ep=EgoyMDI1MDkxMC4wIKXMDSoASAFQAw%3D%3D"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-3 px-6 rounded-lg transition-colors"
-              >
-                Leave a Review
               </a>
             </div>
           </div>
